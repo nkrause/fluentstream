@@ -131,9 +131,12 @@ app.post('/check-ip', (req, res) => {
   // check that the ipList param exists and the list isn't empty
   if(ipList && ipList.length > 0){
     ipList.forEach(ip => {
-      // found a match - add it to the list to send back
-      if(ipRouter.route(ip)){
-        ipMatches.add(ip);
+      // skip invalid IPs
+      if(isValidIP(ip)){
+        // found a match - add it to the list to send back
+        if(ipRouter.route(ip)){
+          ipMatches.add(ip);
+        }
       }
     });
 
@@ -146,7 +149,7 @@ app.post('/check-ip', (req, res) => {
   }
 
   // bad input
-  return res.status(500).send({ msg: "Error: missing parameter 'ipList'" })
+  return res.status(500).send({ msg: "Error: bad input" })
 })
 
 // catch 404 and forward to error handler
