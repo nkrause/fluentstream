@@ -47,3 +47,4 @@ Note: for searching by file upload, I found ~550 IPs to check from https://www.m
 - make results table in client app prettier for longer lists
 - more research on which Firehol lists would be most beneficial for phone calls
 - add SSL and change domain to exclude port number
+- add last updated time, the list of sources the service is checking, and maybe return the source the IP matched with in the results
