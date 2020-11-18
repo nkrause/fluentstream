@@ -1,7 +1,6 @@
 # FluentStream IP Fraud Detection
 
 - Client: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3001/
-- Server: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3000/
 
 **Background:**
 - A cronjob is set to run ‘update-ipsets’ (at every 55th min of the hour) on an EC2 instance and automatically download the set of blacklist IPS
@@ -46,3 +45,4 @@ Note: for searching by file upload, I found ~550 IPs to check from https://www.m
 - add automated testing
 - make results table in client app prettier for longer lists
 - more research on which Firehol lists would be most beneficial for phone calls
+- add SSL and change domain to exclude port number
