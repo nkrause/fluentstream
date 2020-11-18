@@ -23,7 +23,6 @@ const isValidIP = (ip) => {
 
 // helper function to populate the router with IP addresses
 const populateRouter = () => {  
-  const start = moment(new Date());
   // create a temporary router
   let _ipRouter = new IPRouter({});
 
@@ -48,8 +47,6 @@ const populateRouter = () => {
     // update the router
     ipRouter = _ipRouter;
     _ipRouter = null;
-    const end = moment(new Date());
-    console.log(end-start);
   })
 }
 
