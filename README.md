@@ -1,5 +1,8 @@
 # FluentStream IP Fraud Detection
 
+- Client: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3001/
+- Server: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3000/
+
 **Background:**
 - A cronjob is set to run ‘update-ipsets’ (at every 55th min of the hour) on an EC2 instance and automatically download the set of blacklist IPS
 - A second cronjob (on EC2) is set to run (at every 58th min of the hour) after the first, which takes all the downloaded .ipset and .netset files and concatenates them into one file, which is stored in the /public directory on the server app 
@@ -7,8 +10,6 @@
     - https://github.com/kotarou3/node-ip-router
 - Once an endpoint is called, the IP or list of IPs is checked against the populated IPRouter (which contains both single IPs and IP blocks) and the IPs that match are returned
 
-- Client: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3001/
-- Server: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3000/
 - Endpoints: 
     - /upload (only works from client)
     - /check-ip 
