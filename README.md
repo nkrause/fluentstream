@@ -28,7 +28,7 @@
   - 1 hour - benchmarking and code cleanup
 
 - Day 3:
-  - 4 hours - final refactoring/commenting, testing on AWS, uploading to git and adding README
+  - 3 hours - final refactoring/commenting, testing on AWS, uploading to git and adding README
 
 **Benchmarking:**
 - Populating IPRouter with ~900k entries after 5 runs (local): ~18.5s
@@ -41,3 +41,8 @@ Search by file upload after 5 runs:
 - 10k entries: 240ms (local), 754.6ms (aws)
 
 Note: for searching by file upload, I found ~550 IPs to check from https://www.maxmind.com/en/high-risk-ip-sample-list. I copy/pasted the entire list multiple times to ultimately reach 10k IPs to check. This should be fine for our benchmark since we are really only trying to see the time it takes to iterate through every IP address in the file.
+
+**TODO:**
+- add automated testing
+- make results table in client app prettier for longer lists
+- more research on which Firehol lists would be most beneficial for phone calls
