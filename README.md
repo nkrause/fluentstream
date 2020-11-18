@@ -1,5 +1,6 @@
 # FluentStream IP Fraud Detection
 
+- Server: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3000/
 - Client: http://ec2-3-16-143-191.us-east-2.compute.amazonaws.com:3001/
 
 **Background:**
